@@ -8,3 +8,4 @@ vim.opt.number = true
 vim.opt.mouse = "a"
 vim.opt.title = true
 vim.opt.foldenable = false
+vim.opt.updatetime = 100
