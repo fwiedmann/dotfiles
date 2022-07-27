@@ -9,3 +9,4 @@ vim.opt.mouse = "a"
 vim.opt.title = true
 vim.opt.foldenable = false
 vim.opt.updatetime = 100
+vim.opt.encoding = "UTF-8"

@@ -9,4 +9,11 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'airblade/vim-gitgutter'
   use 'preservim/nerdtree'
+  use 'junegunn/fzf'
+  use 'junegunn/fzf.vim'
+  use 'ryanoasis/vim-devicons'
+  use 'Xuyuanp/nerdtree-git-plugin'
+  use 'tiagofumo/vim-nerdtree-syntax-highlight'
+  use 'nvim-treesitter/nvim-treesitter'
+  use 'fatih/vim-go'
 end)
