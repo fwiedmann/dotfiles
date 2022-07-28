@@ -17,5 +17,7 @@ return require('packer').startup(function(use)
   use 'fatih/vim-go'
   use 'ryanoasis/vim-devicons'
   use 'f-person/git-blame.nvim'
+  use {'neoclide/coc.nvim', branch = 'release'}
   use 'tpope/vim-fugitive'
+  use 'prettier/vim-prettier'
 end)
