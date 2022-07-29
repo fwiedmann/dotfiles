@@ -10,3 +10,5 @@ vim.opt.title = true
 vim.opt.foldenable = false
 vim.opt.updatetime = 400 
 vim.opt.encoding = "UTF-8"
+
+vim.opt.clipboard = "unnamedplus"

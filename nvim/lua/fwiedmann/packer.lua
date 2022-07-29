@@ -20,4 +20,6 @@ return require('packer').startup(function(use)
   use {'neoclide/coc.nvim', branch = 'release'}
   use 'tpope/vim-fugitive'
   use 'prettier/vim-prettier'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-lua/plenary.nvim'
 end)
