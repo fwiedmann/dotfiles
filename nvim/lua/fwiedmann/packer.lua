@@ -9,8 +9,6 @@ return require('packer').startup(function(use)
   use 'doums/darcula'
   use 'airblade/vim-gitgutter'
   use 'preservim/nerdtree'
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use 'nvim-treesitter/nvim-treesitter'
@@ -22,4 +20,5 @@ return require('packer').startup(function(use)
   use 'prettier/vim-prettier'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-lua/plenary.nvim'
+  use 'dense-analysis/ale'
 end)
