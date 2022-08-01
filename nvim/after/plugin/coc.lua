@@ -1,4 +1,4 @@
-vim.g.coc_global_extensions = {'coc-tsserver', 'coc-angular', 'coc-html', 'coc-css', 'coc-git', 'coc-json', 'coc-java', 'coc-eslint', 'coc-go'}
+vim.g.coc_global_extensions = {'coc-tsserver', 'coc-angular', 'coc-html', 'coc-css', 'coc-json', 'coc-java', 'coc-eslint', 'coc-go'}
 
 vim.api.nvim_command('nmap <silent> gd <Plug>(coc-definition)')
 vim.api.nvim_command('nmap <silent> gy <Plug>(coc-type-definition)')

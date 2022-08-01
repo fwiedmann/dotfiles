@@ -26,6 +26,6 @@ vim.keymap.set('n','<Leader>n', ':NERDTreeToggle<cr>')
 
 -- move between splits with arrow keys
 vim.keymap.set('n','<up>', ':wincmd k<cr>', { silent = true })
-vim.keymap.set('n','<down>', ':wincmd h<cr>', { silent = true })
+vim.keymap.set('n','<down>', ':wincmd j<cr>', { silent = true })
 vim.keymap.set('n','<left>', ':wincmd h<cr>', { silent = true })
 vim.keymap.set('n','<right>', ':wincmd l<cr>', { silent = true })
