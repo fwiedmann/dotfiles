@@ -21,4 +21,5 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'dense-analysis/ale'
+  use 'vim-test/vim-test'
 end)
