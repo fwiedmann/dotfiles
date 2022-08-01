@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
 
+vim.keymap.set('n', ';', ':')
+
 -- write
 vim.keymap.set('n', '<Leader>w', ':write<cr>')
 
@@ -29,3 +31,9 @@ vim.keymap.set('n','<up>', ':wincmd k<cr>', { silent = true })
 vim.keymap.set('n','<down>', ':wincmd j<cr>', { silent = true })
 vim.keymap.set('n','<left>', ':wincmd h<cr>', { silent = true })
 vim.keymap.set('n','<right>', ':wincmd l<cr>', { silent = true })
+
+-- vim-test
+vim.keymap.set('n','<Leader>tn', ':TestNearest<cr>', { silent = true })
+vim.keymap.set('n','<Leader>tf', ':TestFile<cr>', { silent = true })
+vim.keymap.set('n','<Leader>ts', ':TestSuite<cr>', { silent = true })
+vim.keymap.set('n','<Leader>tl', ':TestLast<cr>', { silent = true })

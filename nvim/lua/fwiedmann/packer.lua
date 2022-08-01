@@ -22,4 +22,6 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'dense-analysis/ale'
   use 'vim-test/vim-test'
+  use('vim-airline/vim-airline')
+  use('vim-airline/vim-airline-themes')
 end)
