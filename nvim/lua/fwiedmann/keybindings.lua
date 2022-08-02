@@ -19,6 +19,7 @@ vim.keymap.set('n', '<Leader>ff', ':Telescope find_files<cr>')
 vim.keymap.set('n', '<Leader>fg', ':Telescope live_grep<cr>')
 vim.keymap.set('n', '<Leader>fb', ':Telescope buffers<cr>')
 vim.keymap.set('n', '<Leader>fh', ':Telescope help_tags<cr>')
+vim.keymap.set('n', '<Leader>fp', ':Telescope projects<cr>')
 
 -- go back to last buffer
 vim.keymap.set('n', '<Leader>b', ':b#<cr>')
