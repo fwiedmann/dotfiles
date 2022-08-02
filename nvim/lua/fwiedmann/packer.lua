@@ -7,7 +7,10 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use 'doums/darcula'
-  use 'airblade/vim-gitgutter'
+  use "EdenEast/nightfox.nvim"
+  use {
+    'lewis6991/gitsigns.nvim',
+  }
   use 'preservim/nerdtree'
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -22,6 +25,8 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'dense-analysis/ale'
   use 'vim-test/vim-test'
-  use('vim-airline/vim-airline')
-  use('vim-airline/vim-airline-themes')
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 end)

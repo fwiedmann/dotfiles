@@ -1,4 +1,4 @@
 vim.g.tokyonight_transparent = true
 vim.opt.background = "dark"
 
-vim.cmd("colorscheme darcula")
+vim.cmd("colorscheme nightfox")
