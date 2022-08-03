@@ -17,6 +17,7 @@ telescope.setup {
     path_display = { "smart" },
     file_ignore_patterns = { ".git/", "node_modules" },
 }
+}
 
 project.setup({
   -- Manual mode doesn't automatically change your root directory, so you have

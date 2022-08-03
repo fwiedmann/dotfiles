@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
   use {
     'lewis6991/gitsigns.nvim',
   }
-  use 'preservim/nerdtree'
+  use 'kyazdani42/nvim-tree.lua'
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use 'nvim-treesitter/nvim-treesitter'

@@ -25,7 +25,7 @@ vim.keymap.set('n', '<Leader>fp', ':Telescope projects<cr>')
 vim.keymap.set('n', '<Leader>b', ':b#<cr>')
 
 -- nerdtree
-vim.keymap.set('n','<Leader>n', ':NERDTreeToggle<cr>')
+vim.keymap.set('n','<Leader>n', ':NvimTreeToggle<cr>')
 
 -- move between splits with arrow keys
 vim.keymap.set('n','<up>', ':wincmd k<cr>', { silent = true })
