@@ -1,5 +1,3 @@
-
-
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
   return
@@ -17,7 +15,13 @@ nvim_tree.setup {
     enable = true,
     update_cwd = true,
   },
+
+
+  view = {
+    adaptive_size = true,
+  },
   renderer = {
+    group_empty = true,
     root_folder_modifier = ":t",
     icons = {
       glyphs = {
@@ -53,18 +57,6 @@ nvim_tree.setup {
       info = "",
       warning = "",
       error = "",
-    },
-  },
-  view = {
-    width = 30,
-    height = 30,
-    side = "left",
-    mappings = {
-      list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
-      },
     },
   },
 }
