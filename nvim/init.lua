@@ -12,7 +12,9 @@ let g:ale_fixers = {
 \   'typescript': ['prettier','eslint']
 \}
 ]]
+
 require('lualine').setup()
 require("fwiedmann")
 require("fwiedmann/packer")
 require("fwiedmann/keybindings")
+require("fwiedmann/lsp")
