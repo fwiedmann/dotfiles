@@ -7,6 +7,6 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'html': ['prettier'],
 \   'terraform': ['terraform'],
-\   'java': ['google_java_format', 'remove_trailing_lines', 'trim_whitespace' ]
+\   'java': ['google_java_format', 'remove_trailing_lines', 'trim_whitespace' ],
 \}
 ]]

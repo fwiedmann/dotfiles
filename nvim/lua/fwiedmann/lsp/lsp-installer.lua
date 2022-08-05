@@ -14,8 +14,8 @@ local servers = {
   "tflint",
   "gopls",
   "jdtls",
-  "grammarly",
-  "eslint"
+  "eslint",
+  "marksman"
 }
 
 lsp_installer.setup()

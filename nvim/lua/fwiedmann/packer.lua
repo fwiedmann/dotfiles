@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'doums/darcula'
   use "EdenEast/nightfox.nvim"
+  use { "lunarvim/darkplus.nvim", commit = "2584cdeefc078351a79073322eb7f14d7fbb1835" }
   use {
     'lewis6991/gitsigns.nvim',
   }
@@ -61,5 +62,8 @@ return require('packer').startup(function(use)
 use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
   require("toggleterm").setup()
   end}
+
+    use { "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" } -- Autopairs, integrates with both cmp and treesitter
+
 
 end)
