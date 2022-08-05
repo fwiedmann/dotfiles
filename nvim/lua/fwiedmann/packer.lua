@@ -50,10 +50,6 @@ return require('packer').startup(function(use)
     'romgrk/barbar.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
-
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-
   use { "akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
     require("toggleterm").setup()
   end }
@@ -61,12 +57,9 @@ return require('packer').startup(function(use)
   use { "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" } -- Autopairs, integrates with both cmp and treesitter
   use 'windwp/nvim-ts-autotag'
   use 'lukas-reineke/lsp-format.nvim'
-
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  }
-
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use 'numToStr/Comment.nvim'
 end)
