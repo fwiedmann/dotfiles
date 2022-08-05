@@ -19,29 +19,23 @@ return require('packer').startup(function(use)
   use 'fatih/vim-go'
   use 'ryanoasis/vim-devicons'
   use 'f-person/git-blame.nvim'
-  -- use {'neoclide/coc.nvim', branch = 'release'}
+
+  -- format files with all available lsp-- use {'neoclide/coc.nvim', branch = 'release'}
   use 'tpope/vim-fugitive'
   use 'prettier/vim-prettier'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'dense-analysis/ale'
   use 'vim-test/vim-test'
   use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use "ahmedkhalf/project.nvim"
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-  }
   use 'puremourning/vimspector'
   use 'L3MON4D3/LuaSnip'
   requires = "kyazdani42/nvim-web-devicons",
-  -- code completion & autocpmpletion
-  use { "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" } -- The completion plugin
+      -- code completion & autocpmpletion
+      use { "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" } -- buffer completions
   use { "hrsh7th/cmp-path", commit = "466b6b8270f7ba89abd59f402c73f63c7331ff6e" } -- path completions
   use { "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" } -- snippet completions
@@ -53,17 +47,26 @@ return require('packer').startup(function(use)
   use { "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" }
   use {
-  'romgrk/barbar.nvim',
-  requires = {'kyazdani42/nvim-web-devicons'}
+    'romgrk/barbar.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' }
   }
 
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
-use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
-  require("toggleterm").setup()
-  end}
+  use { "akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+    require("toggleterm").setup()
+  end }
 
-    use { "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" } -- Autopairs, integrates with both cmp and treesitter
+  use { "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" } -- Autopairs, integrates with both cmp and treesitter
+  use 'windwp/nvim-ts-autotag'
+  use 'lukas-reineke/lsp-format.nvim'
 
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
 
 end)
