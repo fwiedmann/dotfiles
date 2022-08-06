@@ -16,7 +16,7 @@ local servers = {
   "gopls",
   "jdtls",
   "eslint",
-  "yamalls",
+  "yamlls",
   "kotlin_language_server"
 }
 
@@ -43,6 +43,11 @@ for _, server in pairs(servers) do
   if server == "pyright" then
     local pyright_opts = require "fwiedmann.lsp.settings.pyright"
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+  end
+
+  if server == "html" then
+      local html_opts = require "fwiedmann.lsp.settings.html"
+      opts = vim.tbl_deep_extend("force", html_opts, opts)
   end
 
   lspconfig[server].setup(opts)
