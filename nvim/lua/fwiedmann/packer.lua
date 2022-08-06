@@ -21,16 +21,11 @@ return require('packer').startup(function(use)
 
   use 'kyazdani42/nvim-tree.lua'
 
-  -- use 'Xuyuanp/nerdtree-git-plugin'
-  -- use 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-
   use 'nvim-treesitter/nvim-treesitter'
   use 'fatih/vim-go'
   use 'vim-test/vim-test'
   use 'puremourning/vimspector'
 
-  -- use 'prettier/vim-prettier'
   use 'nvim-telescope/telescope.nvim'
   use "ahmedkhalf/project.nvim"
   use 'nvim-lua/plenary.nvim'
@@ -63,5 +58,4 @@ return require('packer').startup(function(use)
   use 'lukas-reineke/lsp-format.nvim'
   use { "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end }
   use 'numToStr/Comment.nvim'
-
 end)
