@@ -6,36 +6,41 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  
+  -- themes
   use 'doums/darcula'
   use "EdenEast/nightfox.nvim"
-  use { "lunarvim/darkplus.nvim", commit = "2584cdeefc078351a79073322eb7f14d7fbb1835" }
-  use {
-    'lewis6991/gitsigns.nvim',
-  }
+  use "lunarvim/darkplus.nvim" 
+  use 'ryanoasis/vim-devicons'
+  
+  -- git
+  use 'lewis6991/gitsigns.nvim'
+  use 'f-person/git-blame.nvim'
+  use 'tpope/vim-fugitive'
+
   use 'kyazdani42/nvim-tree.lua'
-  use 'Xuyuanp/nerdtree-git-plugin'
-  use 'tiagofumo/vim-nerdtree-syntax-highlight'
+      
+  -- use 'Xuyuanp/nerdtree-git-plugin'
+  -- use 'tiagofumo/vim-nerdtree-syntax-highlight'
+  
+
   use 'nvim-treesitter/nvim-treesitter'
   use 'fatih/vim-go'
-  use 'ryanoasis/vim-devicons'
-  use 'f-person/git-blame.nvim'
-
-  -- format files with all available lsp-- use {'neoclide/coc.nvim', branch = 'release'}
-  use 'tpope/vim-fugitive'
-  use 'prettier/vim-prettier'
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-lua/plenary.nvim'
   use 'vim-test/vim-test'
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-  use "ahmedkhalf/project.nvim"
   use 'puremourning/vimspector'
-  use 'L3MON4D3/LuaSnip'
-  requires = "kyazdani42/nvim-web-devicons",
-      -- code completion & autocpmpletion
-      use { "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" } -- The completion plugin
+  
+  -- use 'prettier/vim-prettier'
+  use 'nvim-telescope/telescope.nvim'
+  use "ahmedkhalf/project.nvim"
+  use 'nvim-lua/plenary.nvim'
+  
+  
+  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
+  
+  use { 'L3MON4D3/LuaSnip', requires = "kyazdani42/nvim-web-devicons" }
+  
+  -- code completion & autocpmpletion
+  use { "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" } -- buffer completions
   use { "hrsh7th/cmp-path", commit = "466b6b8270f7ba89abd59f402c73f63c7331ff6e" } -- path completions
   use { "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" } -- snippet completions
@@ -46,20 +51,16 @@ return require('packer').startup(function(use)
   use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
   use { "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" }
-  use {
-    'romgrk/barbar.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
+  use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' }
   }
-  use { "akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
-    require("toggleterm").setup()
-  end }
+
+
+  use { "akinsho/toggleterm.nvim", tag = 'v2.*', config = function() require("toggleterm").setup() end }
 
   use { "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" } -- Autopairs, integrates with both cmp and treesitter
   use 'windwp/nvim-ts-autotag'
   use 'lukas-reineke/lsp-format.nvim'
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
+  use { "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end}
   use 'numToStr/Comment.nvim'
+
 end)

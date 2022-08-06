@@ -1,20 +1,16 @@
--- set ale config before loading plugins
-vim.g.ale_fix_on_save = 1
-vim.g.ale_completion_enabled = 1
-vim.g.gitgutter_highlight_linenrs = 1
-
-
-vim.cmd[[
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'css': ['prettier'],
-\   'javascript': ['prettier','eslint'],
-\   'typescript': ['prettier','eslint']
-\}
-]]
-
-require('lualine').setup()
-require("fwiedmann")
 require("fwiedmann/packer")
+require('fwiedmann/options')
 require("fwiedmann/keybindings")
+
+require('fwiedmann/autopairs')
+require('fwiedmann/cmp')
+require('fwiedmann/color')
+require('fwiedmann/comment')
+require('fwiedmann/git')
+require('fwiedmann/nvim-tree')
+require('fwiedmann/telescope')
+require('fwiedmann/toggleterm')
+require('fwiedmann/treesitter')
+require('fwiedmann/ts-autotag')
+require('fwiedmann/lualine')
 require("fwiedmann/lsp")
