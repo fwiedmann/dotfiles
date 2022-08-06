@@ -19,6 +19,11 @@ nvim_tree.setup {
 
   view = {
     adaptive_size = true,
+    mappings = {
+      list = {
+        { key = "<S-k>", action = "toggle_file_info" }
+      }
+    }
   },
   renderer = {
     group_empty = true,

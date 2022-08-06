@@ -25,16 +25,16 @@ vim.keymap.set('n', '<Leader>fp', ':Telescope projects<cr>')
 vim.keymap.set('n', '<Leader>b', ':b#<cr>')
 
 -- nerdtree
-vim.keymap.set('n','<Leader>n', ':NvimTreeToggle<cr>')
+vim.keymap.set('n', '<Leader>n', ':NvimTreeToggle<cr>')
 
 -- move between splits with arrow keys
-vim.keymap.set('n','<up>', ':wincmd k<cr>', { silent = true })
-vim.keymap.set('n','<down>', ':wincmd j<cr>', { silent = true })
-vim.keymap.set('n','<left>', ':wincmd h<cr>', { silent = true })
-vim.keymap.set('n','<right>', ':wincmd l<cr>', { silent = true })
+vim.keymap.set('n', '<C-k>', ':wincmd k<cr>', { silent = true })
+vim.keymap.set('n', '<C-j>', ':wincmd j<cr>', { silent = true })
+vim.keymap.set('n', '<C-h>', ':wincmd h<cr>', { silent = true })
+vim.keymap.set('n', '<C-l>', ':wincmd l<cr>', { silent = true })
 
 -- vim-test
-vim.keymap.set('n','<Leader>tn', ':TestNearest<cr>', { silent = true })
-vim.keymap.set('n','<Leader>tf', ':TestFile<cr>', { silent = true })
-vim.keymap.set('n','<Leader>ts', ':TestSuite<cr>', { silent = true })
-vim.keymap.set('n','<Leader>tl', ':TestLast<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>tn', ':TestNearest<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>tf', ':TestFile<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>ts', ':TestSuite<cr>', { silent = true })
+vim.keymap.set('n', '<Leader>tl', ':TestLast<cr>', { silent = true })

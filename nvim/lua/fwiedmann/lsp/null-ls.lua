@@ -24,5 +24,6 @@ null_ls.setup {
     formatting.google_java_format,
     diagnostics.flake8,
     diagnostics.misspell,
+    diagnostics.markdownlint
   },
 }
