@@ -5,6 +5,12 @@ if not status_cmp_ok then
   return
 end
 
+local status_lsp_format_ok, lsp_format = pcall(require, "lsp-format")
+if not status_lsp_format_ok then
+  return
+end
+
+
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true
 M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
@@ -74,7 +80,7 @@ end
 M.on_attach = function(client, bufnr)
 
   -- format files with all available lsp
-  require "lsp-format".on_attach(client)
+  lsp_format.on_attach(client)
 
   if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false

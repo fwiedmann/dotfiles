@@ -4,18 +4,20 @@ if not status_ok then
 end
 
 local servers = {
+  "angularls",
   "sumneko_lua",
   "cssls",
+  "eslint",
   "html",
   "tsserver",
   "jsonls",
-  "angularls",
   "terraformls",
   "tflint",
   "gopls",
   "jdtls",
   "eslint",
-  "marksman"
+  "yamalls",
+  "kotlin_language_server"
 }
 
 lsp_installer.setup()
