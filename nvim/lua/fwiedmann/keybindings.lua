@@ -5,8 +5,11 @@ vim.keymap.set('n', ';', ':')
 -- write
 vim.keymap.set('n', '<Leader>w', ':write<cr>')
 
--- quit
-vim.keymap.set('n', '<Leader>q', ':quit<cr>')
+-- close buffer
+vim.keymap.set('n', '<Leader>q', ':bd<cr>')
+
+-- close vim
+vim.keymap.set('n', 'q', ':quit<cr>')
 
 -- undo
 vim.keymap.set('n', '<Leader>u', ':undo<cr>')
