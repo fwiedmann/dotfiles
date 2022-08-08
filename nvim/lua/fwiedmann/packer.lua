@@ -49,7 +49,7 @@ return require('packer').startup(function(use)
   use { "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" }
   use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' }
   }
-
+  use 'rafamadriz/friendly-snippets'
 
   use { "akinsho/toggleterm.nvim", tag = 'v2.*', config = function() require("toggleterm").setup() end }
 
