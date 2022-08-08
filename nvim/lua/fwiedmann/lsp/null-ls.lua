@@ -16,6 +16,23 @@ null_ls.setup {
   sources = {
     completion.spell,
     formatting.prettier.with {
+      filetypes = {
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "css",
+        "scss",
+        "less",
+        "html",
+       -- "json",
+        "jsonc",
+        "yaml",
+        "markdown",
+        "graphql",
+        "handlebars",
+      },
       extra_filetypes = { "toml" },
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
@@ -27,17 +44,4 @@ null_ls.setup {
     diagnostics.misspell,
     diagnostics.markdownlint
   },
-  on_attach = function(client, bufnr)
-        if client.supports_method("textDocument/formatting") then
-            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-            vim.api.nvim_create_autocmd("BufWritePre", {
-                group = augroup,
-                buffer = bufnr,
-                callback = function()
-                    -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-                    vim.lsp.buf.formatting_sync()
-                end,
-            })
-        end
-    end,
 }
