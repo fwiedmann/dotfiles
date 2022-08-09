@@ -50,5 +50,10 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", html_opts, opts)
   end
 
+  if server == "yamlls" then
+    local yaml_opts = require "fwiedmann.lsp.settings.yaml"
+    opts = vim.tbl_deep_extend("force", yaml_opts, opts)
+  end
+
   lspconfig[server].setup(opts)
 end

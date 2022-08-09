@@ -28,7 +28,6 @@ null_ls.setup {
         "html",
         -- "json",
         "jsonc",
-        "yaml",
         "markdown",
         "graphql",
         "handlebars",
