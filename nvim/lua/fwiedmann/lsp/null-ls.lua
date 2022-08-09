@@ -26,7 +26,7 @@ null_ls.setup {
         "scss",
         "less",
         "html",
-       -- "json",
+        -- "json",
         "jsonc",
         "yaml",
         "markdown",

@@ -46,8 +46,8 @@ for _, server in pairs(servers) do
   end
 
   if server == "html" then
-      local html_opts = require "fwiedmann.lsp.settings.html"
-      opts = vim.tbl_deep_extend("force", html_opts, opts)
+    local html_opts = require "fwiedmann.lsp.settings.html"
+    opts = vim.tbl_deep_extend("force", html_opts, opts)
   end
 
   lspconfig[server].setup(opts)
