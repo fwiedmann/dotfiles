@@ -7,7 +7,6 @@ local servers = {
   "angularls",
   "sumneko_lua",
   "cssls",
-  "eslint",
   "html",
   "tsserver",
   "jsonls",

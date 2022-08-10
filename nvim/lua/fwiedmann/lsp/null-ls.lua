@@ -15,6 +15,7 @@ null_ls.setup {
   debug = false,
   sources = {
     completion.spell,
+    formatting.eslint_d,
     formatting.prettier.with {
       filetypes = {
         "javascript",
@@ -32,9 +33,8 @@ null_ls.setup {
         "handlebars",
       },
     },
-    formatting.ktlint,
 
-    diagnostics.ktlint,
+    diagnostics.eslint_d,
     diagnostics.misspell,
     diagnostics.markdownlint,
 

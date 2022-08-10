@@ -12,7 +12,6 @@ return require('packer').startup(function(use)
   use "EdenEast/nightfox.nvim"
   use "lunarvim/darkplus.nvim"
   use 'ryanoasis/vim-devicons'
-  use 'Yggdroot/indentLine'
 
   -- git
   use 'lewis6991/gitsigns.nvim'

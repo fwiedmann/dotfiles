@@ -4,6 +4,7 @@
 
 - [misspell](https://github.com/client9/misspell)
 - [markdownlint](https://github.com/DavidAnson/markdownlint)
+- [eslint_d](https://github.com/mantoni/eslint_d.js/)
 
 ## Disable LS Formatters
 
