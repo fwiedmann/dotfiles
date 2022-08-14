@@ -37,7 +37,7 @@ null_ls.setup {
     diagnostics.eslint_d,
     diagnostics.misspell,
     diagnostics.markdownlint,
-
+    diagnostics.revive
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
