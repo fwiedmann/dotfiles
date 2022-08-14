@@ -20,3 +20,11 @@ end
 ```
 
 If the language server itselfs porivdes the ability to disable formatting, create a custom setting in the [settings folder](./nvim/lua/fwiedmann/lsp/settings) and update the options for the server [here](.nvim/lua/fwiedmann/lsp/lsp-installer.lua).
+
+## Brew
+
+Install required software with the brew package manager + the [bundle](https://github.com/homebrew/homebrew-bundle) extension:
+
+```Bash
+brew bundle
+```
