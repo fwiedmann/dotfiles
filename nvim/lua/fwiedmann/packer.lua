@@ -47,8 +47,6 @@ return require('packer').startup(function(use)
   use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
   use { "jose-elias-alvarez/null-ls.nvim", commit = "53622ed39ffe9cf59fad89d1cbfb6edfb94a5d20" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" }
-  use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' }
-  }
   use 'rafamadriz/friendly-snippets'
 
   use { "akinsho/toggleterm.nvim", tag = 'v2.*', config = function() require("toggleterm").setup() end }
@@ -59,4 +57,6 @@ return require('packer').startup(function(use)
   use { "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end }
   use 'numToStr/Comment.nvim'
   use 'goolord/alpha-nvim'
+  use 'norcalli/nvim-colorizer.lua'
+  use 'akinsho/bufferline.nvim'
 end)
