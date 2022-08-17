@@ -14,7 +14,6 @@ local servers = {
   "tflint",
   "gopls",
   "jdtls",
-  "eslint",
   "yamlls",
   "kotlin_language_server"
 }
@@ -52,6 +51,11 @@ for _, server in pairs(servers) do
   if server == "yamlls" then
     local yaml_opts = require "fwiedmann.lsp.settings.yaml"
     opts = vim.tbl_deep_extend("force", yaml_opts, opts)
+  end
+
+  if server == "terraformls" then
+    local terraformls_opts = require "fwiedmann.lsp.settings.terraformls"
+    opts = vim.tbl_deep_extend("force", terraformls_opts, opts)
   end
 
   lspconfig[server].setup(opts)
