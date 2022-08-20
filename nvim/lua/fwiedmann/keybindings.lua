@@ -36,6 +36,10 @@ vim.keymap.set('n', '<C-j>', ':wincmd j<cr>', { silent = true })
 vim.keymap.set('n', '<C-h>', ':wincmd h<cr>', { silent = true })
 vim.keymap.set('n', '<C-l>', ':wincmd l<cr>', { silent = true })
 
+-- move tabs
+vim.keymap.set('n', '<S-Left>', ':tabprevious<CR>', { silent = true })
+vim.keymap.set('n', '<S-Right>', ':tabnext<CR>', { silent = true })
+
 -- vim-test
 vim.keymap.set('n', '<Leader>tn', ':TestNearest<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>tf', ':TestFile<cr>', { silent = true })
