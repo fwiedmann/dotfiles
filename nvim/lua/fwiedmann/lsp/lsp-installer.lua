@@ -14,7 +14,6 @@ local servers = {
   "tflint",
   "gopls",
   "jdtls",
-  "eslint",
   "yamlls",
   "kotlin_language_server"
 }

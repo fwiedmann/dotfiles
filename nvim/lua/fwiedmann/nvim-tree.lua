@@ -20,6 +20,9 @@ nvim_tree.setup {
     update_root = true,
   },
 
+  git = {
+    ignore = false
+  },
 
   view = {
     adaptive_size = true,
