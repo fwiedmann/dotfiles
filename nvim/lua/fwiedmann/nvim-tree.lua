@@ -29,7 +29,6 @@ nvim_tree.setup {
     mappings = {
       list = {
         { key = "<S-k>", action = "toggle_file_info" },
-        { key = "<cr>", action = "tabnew" }
       }
     }
   },

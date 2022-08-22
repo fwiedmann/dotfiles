@@ -1,11 +1,11 @@
-local status_ok, treesitter= pcall(require, "nvim-treesitter.configs")
+local status_ok, treesitter = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
-	return
+  return
 end
 
 treesitter.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "go", "lua", "java", "javascript", "json", "typescript"},
+  ensure_installed = "all",
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,
@@ -14,6 +14,7 @@ treesitter.setup {
   auto_install = true,
 
   -- List of parsers to ignore installing (for "all")
+  ignore_install = { "phpdoc" },
 
   highlight = {
     -- `false` will disable the whole extension
