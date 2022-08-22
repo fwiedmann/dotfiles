@@ -59,4 +59,5 @@ return require('packer').startup(function(use)
   use 'goolord/alpha-nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'akinsho/bufferline.nvim'
+  use 'glepnir/lspsaga.nvim'
 end)

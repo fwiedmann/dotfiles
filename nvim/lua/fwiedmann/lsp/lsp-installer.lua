@@ -15,7 +15,8 @@ local servers = {
   "gopls",
   "jdtls",
   "yamlls",
-  "kotlin_language_server"
+  "kotlin_language_server",
+  "marksman"
 }
 
 lsp_installer.setup()

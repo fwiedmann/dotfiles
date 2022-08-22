@@ -20,12 +20,16 @@ nvim_tree.setup {
     update_root = true,
   },
 
+  git = {
+    ignore = false
+  },
 
   view = {
     adaptive_size = true,
     mappings = {
       list = {
-        { key = "<S-k>", action = "toggle_file_info" }
+        { key = "<S-k>", action = "toggle_file_info" },
+        { key = "<cr>", action = "tabnew" }
       }
     }
   },
