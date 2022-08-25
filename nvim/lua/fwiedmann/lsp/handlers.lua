@@ -5,6 +5,11 @@ if not status_cmp_ok then
   return
 end
 
+
+local status_signature_ok, lsp_signature = pcall(require, "lsp_signature")
+if not status_signature_ok then
+  return
+end
 --local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -97,6 +102,8 @@ M.on_attach = function(client, bufnr)
       end,
     })
   end
+
+  lsp_signature.on_attach({}, bufnr)
 
   lsp_keymaps(bufnr)
   local status_ok, illuminate = pcall(require, "illuminate")

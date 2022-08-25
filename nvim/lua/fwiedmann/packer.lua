@@ -5,6 +5,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
+
   use 'wbthomason/packer.nvim'
 
   -- themes
@@ -59,5 +60,6 @@ return require('packer').startup(function(use)
   use 'goolord/alpha-nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'akinsho/bufferline.nvim'
-  use 'glepnir/lspsaga.nvim'
+  use { 'glepnir/lspsaga.nvim', commit = "2c90dc88e479e785859e9cc1347e976e1cf8645b" }
+  use 'ray-x/lsp_signature.nvim'
 end)
