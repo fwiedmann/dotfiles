@@ -7,6 +7,14 @@
 - [eslint_d](https://github.com/mantoni/eslint_d.js/)
 - [revive](https://revive.run/)
 
+## Terminal Emulator
+
+- [kitty](https://sw.kovidgoyal.net/kitty/)
+- [oh-my-ZSH](https://ohmyz.sh/)
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
+- [dracula theme](https://draculatheme.com/)
+- [JetBrainsMono Nerd Font Mono Regular](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
+
 ## Disable LS Formatters
 
 When two language servers trying to apply formatting neovim asks to chosse one.
