@@ -62,4 +62,7 @@ return require('packer').startup(function(use)
   use 'akinsho/bufferline.nvim'
   use { 'glepnir/lspsaga.nvim', commit = "2c90dc88e479e785859e9cc1347e976e1cf8645b" }
   use 'ray-x/lsp_signature.nvim'
+
+  use { "mfussenegger/nvim-dap", version = "0.2.0" }
+  use 'leoluz/nvim-dap-go'
 end)
