@@ -65,4 +65,6 @@ return require('packer').startup(function(use)
 
   use { "mfussenegger/nvim-dap", version = "0.2.0" }
   use 'leoluz/nvim-dap-go'
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+
 end)

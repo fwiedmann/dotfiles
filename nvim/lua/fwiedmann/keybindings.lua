@@ -42,3 +42,9 @@ vim.keymap.set('n', '<Leader>tn', ':TestNearest<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>tf', ':TestFile<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>ts', ':TestSuite<cr>', { silent = true })
 vim.keymap.set('n', '<Leader>tl', ':TestLast<cr>', { silent = true })
+
+-- dap debugger
+vim.keymap.set('n', '<Leader>db', ":lua require'dap'.toggle_breakpoint()<cr>", { silent = true })
+vim.keymap.set('n', '<Leader>ds', ":lua require'dap'.continue()<cr>", { silent = true })
+vim.keymap.set('n', '<Leader>di', ":lua require'dap'.step_into()<cr>", { silent = true })
+vim.keymap.set('n', '<Leader>do', ":lua require'dap'.step_over()<cr>", { silent = true })
