@@ -14,3 +14,4 @@ vim.opt.encoding = "UTF-8"
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.splitright = true
+vim.opt.relativenumber = true

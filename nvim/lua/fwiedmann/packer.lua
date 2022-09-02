@@ -22,9 +22,10 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
 
   use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter-context'
+
   use 'fatih/vim-go'
   use 'vim-test/vim-test'
-  use 'puremourning/vimspector'
 
   use 'nvim-telescope/telescope.nvim'
   use "ahmedkhalf/project.nvim"
