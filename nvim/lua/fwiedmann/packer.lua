@@ -68,4 +68,6 @@ return require('packer').startup(function(use)
   use 'leoluz/nvim-dap-go'
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 
+  use 'laytan/cloak.nvim'
+
 end)
