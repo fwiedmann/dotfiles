@@ -8,19 +8,11 @@
         {
           "background": "#9A348E",
           "foreground": "#ffffff",
-          "leading_diamond": "\ue0b6",
-          "style": "diamond",
-          "template": "{{ .UserName }} ",
-          "type": "session"
-        },
-        {
-          "background": "#DA627D",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "powerline_symbol": "",
           "properties": {
             "style": "folder"
           },
-          "style": "powerline",
           "template": " {{ .Path }} ",
           "type": "path"
         },
@@ -37,14 +29,6 @@
           "style": "powerline",
           "template": " \u279c ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
           "type": "git"
-        },
-        {
-          "type": "kubectl",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#000000",
-          "background": "#639af2",
-          "template": " \uFD31 {{.Context}}{{if .Namespace}} {{.Namespace}}{{end}} "
         },
         {
           "background": "#68a064",
