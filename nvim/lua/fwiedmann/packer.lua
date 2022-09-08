@@ -33,6 +33,8 @@ return require('packer').startup(function(use)
 
   use 'lukas-reineke/indent-blankline.nvim'
 
+  use 'kyazdani42/nvim-web-devicons'
+
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 
   use { 'L3MON4D3/LuaSnip', requires = "kyazdani42/nvim-web-devicons" }
@@ -69,5 +71,7 @@ return require('packer').startup(function(use)
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 
   use 'laytan/cloak.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
+
 
 end)
