@@ -72,6 +72,6 @@ return require('packer').startup(function(use)
 
   use 'laytan/cloak.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
-
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
 end)
