@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
-vim.keymap.set('n', ';', ':')
+-- pls dont hate me
+vim.keymap.set('n', 'C-c', 'ESC')
 
 -- write
 vim.keymap.set('n', '<Leader>w', ':write<cr>')
