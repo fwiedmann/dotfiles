@@ -19,7 +19,7 @@ vim.keymap.set('n', '<Leader>u', ':undo<cr>')
 vim.keymap.set('n', '<Leader>r', ':redo<cr>')
 
 -- Telescope
-vim.keymap.set('n', '<Leader>ff', ':Telescope find_files<cr>')
+vim.keymap.set('n', '<Leader>ff', ':Telescope find_files hidden=true<cr>')
 vim.keymap.set('n', '<Leader>fg', ':Telescope live_grep<cr>')
 vim.keymap.set('n', '<Leader>fb', ':Telescope buffers<cr>')
 vim.keymap.set('n', '<Leader>fh', ':Telescope help_tags<cr>')
