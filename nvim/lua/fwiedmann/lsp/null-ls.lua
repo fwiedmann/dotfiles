@@ -9,7 +9,7 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 local completion = null_ls.builtins.completion
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local augroup = require("fwiedmann.lsp.format_group")
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
 null_ls.setup {
   debug = false,
@@ -46,8 +46,7 @@ null_ls.setup {
         group = augroup,
         buffer = bufnr,
         callback = function()
-          -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-          vim.lsp.buf.formatting_sync()
+          vim.lsp.buf.format({ bufnr = bufnr })
         end,
       })
     end

@@ -5,6 +5,7 @@ if not status_cmp_ok then
   return
 end
 
+local augroup = require("fwiedmann.lsp.format_group")
 
 local status_signature_ok, lsp_signature = pcall(require, "lsp_signature")
 if not status_signature_ok then
@@ -97,8 +98,7 @@ M.on_attach = function(client, bufnr)
       group = augroup,
       buffer = bufnr,
       callback = function()
-        -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-        vim.lsp.buf.formatting_sync()
+        vim.lsp.buf.format({ bufnr = bufnr })
       end,
     })
   end
