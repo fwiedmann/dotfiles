@@ -48,7 +48,11 @@ return require('packer').startup(function(use)
   use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
 
   use { "neovim/nvim-lspconfig", commit = "e5ba5d2b96843903108b00f07fea782268cdd6af" } -- enable LSP
-  use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
+  -- use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
+  use { "williamboman/mason.nvim", commit = '45606b0e9b01a1565bfc8b57a52ec04f58f5f295' }
+
+  use {"williamboman/mason-lspconfig.nvim"}
+
   use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" }
   use 'rafamadriz/friendly-snippets'

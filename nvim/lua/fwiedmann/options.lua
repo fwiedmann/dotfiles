@@ -15,3 +15,6 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.opt.splitright = true
 vim.opt.relativenumber = true
+
+vim.opt.spelllang = en
+vim.opt.spellsuggest = best, 9
