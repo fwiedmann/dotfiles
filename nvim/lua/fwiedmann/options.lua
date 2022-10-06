@@ -18,3 +18,5 @@ vim.opt.relativenumber = true
 
 vim.opt.spelllang = en, de
 vim.opt.spellsuggest = best, 9
+
+vim.opt.cmdheight = 0
