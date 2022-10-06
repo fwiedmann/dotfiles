@@ -29,6 +29,40 @@ end
 
 If the language server itselfs porivdes the ability to disable formatting, create a custom setting in the [settings folder](./nvim/lua/fwiedmann/lsp/settings) and update the options for the server [here](.nvim/lua/fwiedmann/lsp/lsp-installer.lua).
 
+## LSP Servers
+
+### Java
+
+The java lsp server requires three additional dependecies in order to run debugging and tests.
+
+Clone the two following repos, follow the build instructions and update the `nvim/ftplugin/java.lua` references.
+
+[java debugger](https://github.com/microsoft/java-debug):
+
+```bash
+cd $HOME/git/github.com/microsoft/
+git clone git@github.com:microsoft/java-debug.git
+cd java-debug
+./mvnw clean install
+```
+
+[java test](https://github.com/microsoft/vscode-java-test):
+
+```bash
+cd $HOME/git/github.com/microsoft/
+git clone git@github.com:microsoft/vscode-java-test.git
+cd vscode-java-test
+npm i
+npm run build-plugin
+```
+
+[Lombok](https://projectlombok.org/):
+
+```bash
+mkdir -pv $HOME/.local/share/java
+sudo wget https://projectlombok.org/downloads/lombok.jar -O $HOME/.local/share/java/lombok.jar
+```
+
 ## Brew
 
 Install required software with the brew package manager + the [bundle](https://github.com/homebrew/homebrew-bundle) extension:

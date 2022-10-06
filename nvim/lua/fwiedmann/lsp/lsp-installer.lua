@@ -75,5 +75,10 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", java_opts, opts)
   end
 
+  if server == "jdtls" then
+    goto continue
+  end
+
   lspconfig[server].setup(opts)
+  ::continue::
 end

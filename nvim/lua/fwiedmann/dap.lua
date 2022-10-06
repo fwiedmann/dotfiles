@@ -17,6 +17,8 @@ if not dap_status_ok then
   return
 end
 
+vim.keymap.set('n', '<Leader>dt', ":lua require'dapui'.toggle()<cr>", { silent = true })
+
 dap.listeners.after.event_initialized["dapui_config"] = function()
   dap_ui.open()
 end

@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
   -- use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
   use { "williamboman/mason.nvim", commit = '45606b0e9b01a1565bfc8b57a52ec04f58f5f295' }
 
-  use {"williamboman/mason-lspconfig.nvim"}
+  use { "williamboman/mason-lspconfig.nvim" }
 
   use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
   use { "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" }
@@ -77,5 +77,6 @@ return require('packer').startup(function(use)
   use 'laytan/cloak.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use { 'mfussenegger/nvim-jdtls', version = "0.1.0" }
 
 end)
