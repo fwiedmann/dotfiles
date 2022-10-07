@@ -1,7 +1,5 @@
 tap "homebrew/cask"
 
-
-
 brew "k9s"
 brew "jq"
 brew "kind"
@@ -14,7 +12,7 @@ brew "neovim"
 brew "stern"
 brew "telnet"
 brew "quarkus"
-
+brew "google-java-format"
 
 cask "brave-browser"
 cask "firefox"

@@ -1,45 +1,56 @@
 vim.g.mapleader = " "
 
--- pls dont hate me
-vim.keymap.set('n', 'C-c', 'ESC')
+local status_ok, which_key = pcall(require, "which-key")
+if not status_ok then
+  return
+end
 
--- write
-vim.keymap.set('n', '<Leader>w', ':write<cr>')
+local opts = {
+  mode = "n", -- NORMAL mode
+  prefix = "",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
+}
 
--- close buffer
-vim.keymap.set('n', '<Leader>q', ':bd<cr>')
+local leader_mappings = {
+  name = "Global Leader",
+  ["<Leader>w"] = { ":write<cr>", "write buffer" },
+  ["<Leader>q"] = { ":bd<cr>", "close buffer" },
+  ["<Leader>u"] = { ":undo<cr>", "undo" },
+  ["<Leader>r"] = { ":redo<cr>", "redo" },
+  ["<Leader>ff"] = { ":Telescope find_files hidden=true<cr>", "find files in workspace" },
+  ["<Leader>fg"] = { ":Telescope live_grep<cr>", "find in files in workspace" },
+  ["<Leader>fb"] = { ":Telescope buffers<cr>", "show open buffers" },
+  ["<Leader>n"] = { ":NvimTreeToggle<cr>", "open/close nvimTree" },
+  ["<Leader>db"] = { ":lua require'dap'.toggle_breakpoint()<cr>", "toggle breakpoint" },
+  ["<Leader>ds"] = { ":lua require'dap'.continue()<cr>", "start debugger" },
+  ["<Leader>di"] = { ":lua require'dap'.step_into()<cr>", "step into" },
+  ["<Leader>do"] = { ":lua require'dap'.step_over()<cr>", "step over" },
+}
 
--- close vim
-vim.keymap.set('n', 'q', ':quit<cr>')
+local control_mappings = {
+  name = "Global Control",
+  ["<C-c>"] = { "ESC", "escape bind" },
+  ["<C-k>"] = { ":wincmd k<cr>", "move buffer focus up" },
+  ["<C-j>"] = { ":wincmd j<cr>", "move buffer focus down" },
+  ["<C-h>"] = { ":wincmd h<cr>", "move buffer focus left" },
+  ["<C-l>"] = { ":wincmd l<cr>", "move buffer focus right" },
+}
 
--- undo
-vim.keymap.set('n', '<Leader>u', ':undo<cr>')
+local shift_mappings = {
+  name = "Global shift",
+  ["<S-Left>"] = { ":bp<CR>", "go to previous buffer" },
+  ["<S-Right>"] = { ":bn<CR>", "go to next buffer" },
+}
 
--- redo
-vim.keymap.set('n', '<Leader>r', ':redo<cr>')
+local single_mappings = {
+  name = "Global Single",
+  ["q"] = { ":quit<cr>", "quit" },
+}
 
--- Telescope
-vim.keymap.set('n', '<Leader>ff', ':Telescope find_files hidden=true<cr>')
-vim.keymap.set('n', '<Leader>fg', ':Telescope live_grep<cr>')
-vim.keymap.set('n', '<Leader>fb', ':Telescope buffers<cr>')
-vim.keymap.set('n', '<Leader>fh', ':Telescope help_tags<cr>')
-vim.keymap.set('n', '<Leader>fp', ':Telescope projects<cr>')
-
--- nerdtree
-vim.keymap.set('n', '<Leader>n', ':NvimTreeToggle<cr>')
-
--- move between splits with arrow keys
-vim.keymap.set('n', '<C-k>', ':wincmd k<cr>', { silent = true })
-vim.keymap.set('n', '<C-j>', ':wincmd j<cr>', { silent = true })
-vim.keymap.set('n', '<C-h>', ':wincmd h<cr>', { silent = true })
-vim.keymap.set('n', '<C-l>', ':wincmd l<cr>', { silent = true })
-
--- move buffers
-vim.keymap.set('n', '<S-Left>', ':bp<CR>', { silent = true })
-vim.keymap.set('n', '<S-Right>', ':bn<CR>', { silent = true })
-
--- dap debugger
-vim.keymap.set('n', '<Leader>db', ":lua require'dap'.toggle_breakpoint()<cr>", { silent = true })
-vim.keymap.set('n', '<Leader>ds', ":lua require'dap'.continue()<cr>", { silent = true })
-vim.keymap.set('n', '<Leader>di', ":lua require'dap'.step_into()<cr>", { silent = true })
-vim.keymap.set('n', '<Leader>do', ":lua require'dap'.step_over()<cr>", { silent = true })
+which_key.register(leader_mappings, opts)
+which_key.register(control_mappings, opts)
+which_key.register(shift_mappings, opts)
+which_key.register(single_mappings, opts)

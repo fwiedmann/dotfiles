@@ -33,6 +33,7 @@ null_ls.setup {
         "handlebars",
       },
     },
+    formatting.google_java_format,
 
     diagnostics.eslint_d,
     diagnostics.misspell,

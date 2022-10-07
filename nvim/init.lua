@@ -1,6 +1,8 @@
 require("fwiedmann/packer")
 require('fwiedmann/options')
+require('fwiedmann/which-key')
 require("fwiedmann/keybindings")
+
 
 require('fwiedmann/autopairs')
 require('fwiedmann/cmp')

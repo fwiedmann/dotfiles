@@ -79,4 +79,6 @@ return require('packer').startup(function(use)
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'mfussenegger/nvim-jdtls', version = "0.1.0" }
 
+  use { "folke/which-key.nvim", commit = "6885b669523ff4238de99a7c653d47b081b5506d" }
+
 end)

@@ -63,6 +63,8 @@ mkdir -pv $HOME/.local/share/java
 sudo wget https://projectlombok.org/downloads/lombok.jar -O $HOME/.local/share/java/lombok.jar
 ```
 
+Also use [google-java-format](https://github.com/google/google-java-format) for standard formatting.
+
 ## Brew
 
 Install required software with the brew package manager + the [bundle](https://github.com/homebrew/homebrew-bundle) extension:
