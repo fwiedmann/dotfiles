@@ -48,6 +48,10 @@ local shift_mappings = {
 local single_mappings = {
   name = "Global Single",
   ["q"] = { ":quit<cr>", "quit" },
+  ["<Left>"] = { ":vertical resize -5<cr>", "resize - vertical" },
+  ["<Right>"] = { ":vertical resize +5<cr>", "resize - vertical" },
+  ["<Up>"] = { ":resize +5<cr>", "resize - horizontal" },
+  ["<Down>"] = { ":resize -5<cr>", "resize + horizontal" },
 }
 
 which_key.register(leader_mappings, opts)

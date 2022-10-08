@@ -17,9 +17,9 @@
 
 ## Disable LS Formatters
 
-When two language servers trying to apply formatting neovim asks to chosse one.
-To disbable a language server for formatting go to the [handlers](./nvim/lua/fwiedmann/lsp/handlers.lua).
-In the on_attach method you can check for the specific client and disable the formattig:
+When two language servers trying to apply formatting neovim asks to choose one.
+To disable a language server for formatting go to the [handlers](./nvim/lua/fwiedmann/lsp/handlers.lua).
+In the on_attach method you can check for the specific client and disable the formatting:
 
 ```lua
 if client.name == "kotlin_language_server" then
@@ -27,13 +27,13 @@ client.resolved_capabilities.document_formatting = false
 end
 ```
 
-If the language server itselfs porivdes the ability to disable formatting, create a custom setting in the [settings folder](./nvim/lua/fwiedmann/lsp/settings) and update the options for the server [here](.nvim/lua/fwiedmann/lsp/lsp-installer.lua).
+If the language server itself provides the ability to disable formatting, create a custom setting in the [settings folder](./nvim/lua/fwiedmann/lsp/settings) and update the options for the server [here](.nvim/lua/fwiedmann/lsp/lsp-installer.lua).
 
 ## LSP Servers
 
 ### Java
 
-The java lsp server requires three additional dependecies in order to run debugging and tests.
+The java lsp server requires three additional dependencies in order to run debugging and tests.
 
 Clone the two following repos, follow the build instructions and update the `nvim/ftplugin/java.lua` references.
 
