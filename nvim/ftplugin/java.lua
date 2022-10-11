@@ -1,5 +1,5 @@
-vim.opt_local.shiftwidth = 2
-vim.opt_local.tabstop = 2
+vim.opt_local.shiftwidth = 4
+vim.opt_local.tabstop = 4
 vim.opt_local.cmdheight = 2 -- more space in the neovim command line for displaying messages
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -148,7 +148,7 @@ local config = {
         },
       },
       format = {
-        enabled = false,
+        enabled = true,
         -- settings = {
         --   profile = "asdf"
         -- }
