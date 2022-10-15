@@ -71,11 +71,6 @@ for _, server in pairs(servers) do
   end
 
   if server == "jdtls" then
-    local java_opts = require "fwiedmann.lsp.settings.jdtls"
-    opts = vim.tbl_deep_extend("force", java_opts, opts)
-  end
-
-  if server == "jdtls" then
     goto continue
   end
 

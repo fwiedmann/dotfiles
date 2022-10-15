@@ -28,3 +28,13 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
   dap_ui.close()
 end
+
+dap.configurations.java = {
+  {
+    type = 'java';
+    request = 'attach';
+    name = "Debug (Attach) - Remote";
+    hostName = "127.0.0.1";
+    port = 5005;
+  },
+}

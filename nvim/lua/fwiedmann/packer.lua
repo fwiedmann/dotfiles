@@ -70,14 +70,14 @@ return require('packer').startup(function(use)
   use { 'glepnir/lspsaga.nvim', commit = "2c90dc88e479e785859e9cc1347e976e1cf8645b" }
   use 'ray-x/lsp_signature.nvim'
 
-  use { "mfussenegger/nvim-dap", version = "0.2.0" }
+  use { "mfussenegger/nvim-dap", version = "0.3.0" }
   use 'leoluz/nvim-dap-go'
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 
   use 'laytan/cloak.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-  use { 'mfussenegger/nvim-jdtls', version = "0.1.0" }
+  use { 'mfussenegger/nvim-jdtls', commit = "faf7ec2df507e16082afc4ef6b18813863f68dd8" }
 
   use { "folke/which-key.nvim", commit = "6885b669523ff4238de99a7c653d47b081b5506d" }
   use { 'ThePrimeagen/harpoon', commit = "4dfe94e633945c14ad0f03044f601b8e6a99c708" }

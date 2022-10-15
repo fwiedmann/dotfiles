@@ -11,7 +11,6 @@ local status_signature_ok, lsp_signature = pcall(require, "lsp_signature")
 if not status_signature_ok then
   return
 end
---local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -93,11 +92,9 @@ M.on_attach = function(client, bufnr)
   end
 
   if client.name == "jdtls" then
+    require('jdtls').setup_dap({ hotcodereplace = 'auto' })
+    require("jdtls.setup").add_commands()
     vim.lsp.codelens.refresh()
-    if JAVA_DAP_ACTIVE then
-      require("jdtls").setup_dap { hotcodereplace = "auto" }
-      require("jdtls.dap").setup_dap_main_class_configs()
-    end
   end
 
   if client.supports_method("textDocument/formatting") then
