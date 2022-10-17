@@ -28,6 +28,9 @@ local leader_mappings = {
   ["<Leader>ds"] = { ":lua require'dap'.continue()<cr>", "start debugger" },
   ["<Leader>di"] = { ":lua require'dap'.step_into()<cr>", "step into" },
   ["<Leader>do"] = { ":lua require'dap'.step_over()<cr>", "step over" },
+  ["<Leader>cr"] = { "<Plug>RestNvim", "Run HTTP request at current cursor" },
+  ["<Leader>cl"] = { "<Plug>RestNvimLast", "Run last HTTP request" },
+  ["<Leader>cp"] = { "<Plug>RestNvimPreview", "Show curl preview of request" },
 }
 
 local control_mappings = {

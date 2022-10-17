@@ -82,4 +82,9 @@ return require('packer').startup(function(use)
   use { "folke/which-key.nvim", commit = "6885b669523ff4238de99a7c653d47b081b5506d" }
   use { 'ThePrimeagen/harpoon', commit = "4dfe94e633945c14ad0f03044f601b8e6a99c708" }
   use { 'krivahtoo/silicon.nvim', run = './install.sh' }
+  use {
+    "NTBBloodbath/rest.nvim",
+    requires = { "nvim-lua/plenary.nvim" }
+  }
+
 end)

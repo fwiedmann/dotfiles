@@ -13,6 +13,7 @@ brew "stern"
 brew "telnet"
 brew "quarkus"
 brew "google-java-format"
+brew "bensadeh/circumflex/circumflex"
 
 cask "brave-browser"
 cask "firefox"
