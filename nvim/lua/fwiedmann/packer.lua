@@ -70,9 +70,6 @@ return require('packer').startup(function(use)
   use { 'glepnir/lspsaga.nvim', commit = "2c90dc88e479e785859e9cc1347e976e1cf8645b" }
   use 'ray-x/lsp_signature.nvim'
 
-  use { "mfussenegger/nvim-dap", version = "0.3.0" }
-  use 'leoluz/nvim-dap-go'
-  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 
   use 'laytan/cloak.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
@@ -86,5 +83,17 @@ return require('packer').startup(function(use)
     "NTBBloodbath/rest.nvim",
     requires = { "nvim-lua/plenary.nvim" }
   }
+
+  --dap
+  use { "mfussenegger/nvim-dap", version = "0.3.0" }
+  use 'leoluz/nvim-dap-go'
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } }
+  use {
+    "microsoft/vscode-js-debug",
+    opt = true,
+    run = "npm install --legacy-peer-deps && npm run compile"
+  }
+  use 'David-Kunz/jester'
 
 end)
