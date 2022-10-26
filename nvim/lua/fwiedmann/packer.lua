@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter-context'
 
   use 'fatih/vim-go'
-  use 'klen/nvim-test'
+  use 'vim-test/vim-test'
 
   use 'nvim-telescope/telescope.nvim'
   use "ahmedkhalf/project.nvim"

@@ -31,6 +31,7 @@ dap_vscode.setup({
   adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' }, -- which adapters to register in nvim-dap
 })
 
+
 for _, language in ipairs({ "typescript", "javascript" }) do
   dap.configurations[language] = {
     {
@@ -52,30 +53,25 @@ for _, language in ipairs({ "typescript", "javascript" }) do
       protocol = "inspector",
       port = 9222,
       webRoot = "${workspaceFolder}"
-    }
+    },
+    -- {
+    --   type = "pwa-node",
+    --   request = "launch",
+    --   name = "Launch NX test",
+    --   program = "${workspaceFolder}/node_modules/@angular/cli/bin/ng",
+    --   args = {
+    --     "test",
+    --     "cars",
+    --     "--codeCoverage=false",
+    --     "--testNamePattern=ABC",
+    --     "--testFile=${workspaceFolder}/libs/cars/src/lib/abc.spec.ts"
+    --   },
+    --   cwd = "${workspaceFolder}",
+    -- },
   }
 end
 
--- require("jester").setup({
---   path_to_jest_run = './node_modules/jest/bin/jest.js',
---   path_to_jest_debug = './node_modules/jest/bin/jest.js',
---   dap = {
---     type = "pwa-node",
---     request = "launch",
---     name = "Debug Jest Tests",
---     -- trace = true, -- include debugger info
---     runtimeExecutable = "node",
---     runtimeArgs = {
---       "./node_modules/jest/bin/jest.js",
---       "--runInBand",
---     },
---     rootPath = "${workspaceFolder}",
---     cwd = "${workspaceFolder}",
---     console = "integratedTerminal",
---     internalConsoleOptions = "neverOpen",
---   }
--- })
---
+
 -- -- java debugger
 dap.configurations.java = {
   {
