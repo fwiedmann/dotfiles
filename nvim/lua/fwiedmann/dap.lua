@@ -31,6 +31,10 @@ dap_vscode.setup({
   adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' }, -- which adapters to register in nvim-dap
 })
 
+local status_nx_dap_ok, nxdap = pcall(require, "nx-dap")
+if not status_nx_dap_ok then
+  return
+end
 
 for _, language in ipairs({ "typescript", "javascript" }) do
   dap.configurations[language] = {
@@ -54,20 +58,7 @@ for _, language in ipairs({ "typescript", "javascript" }) do
       port = 9222,
       webRoot = "${workspaceFolder}"
     },
-    -- {
-    --   type = "pwa-node",
-    --   request = "launch",
-    --   name = "Launch NX test",
-    --   program = "${workspaceFolder}/node_modules/@angular/cli/bin/ng",
-    --   args = {
-    --     "test",
-    --     "cars",
-    --     "--codeCoverage=false",
-    --     "--testNamePattern=ABC",
-    --     "--testFile=${workspaceFolder}/libs/cars/src/lib/abc.spec.ts"
-    --   },
-    --   cwd = "${workspaceFolder}",
-    -- },
+    nxdap.setup()
   }
 end
 

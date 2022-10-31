@@ -95,5 +95,5 @@ return require('packer').startup(function(use)
     run = "npm install --legacy-peer-deps && npm run compile"
   }
   use 'David-Kunz/jester'
-
+  use "fwiedmann/nx-dap.nvim"
 end)
