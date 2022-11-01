@@ -81,14 +81,14 @@ end
 M.on_attach = function(client, bufnr)
 
   if client.name == "tsserver" then
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
   end
 
   if client.name == "kotlin_language_server" then
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
   end
   if client.name == "yamlls" then
-    client.resolved_capabilities.document_formatting = true
+    client.server_capabilities.document_formatting = true
   end
 
   if client.name == "jdtls" then

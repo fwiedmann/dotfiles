@@ -84,6 +84,7 @@ return require('packer').startup(function(use)
     requires = { "nvim-lua/plenary.nvim" }
   }
 
+  use "folke/todo-comments.nvim"
   --dap
   use { "mfussenegger/nvim-dap", version = "0.3.0" }
   use 'leoluz/nvim-dap-go'
