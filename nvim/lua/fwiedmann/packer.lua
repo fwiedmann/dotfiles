@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
 
   -- themes
   use 'doums/darcula'
+  use 'folke/tokyonight.nvim'
   use "EdenEast/nightfox.nvim"
   use "lunarvim/darkplus.nvim"
   use 'ryanoasis/vim-devicons'
@@ -85,6 +86,7 @@ return require('packer').startup(function(use)
   }
 
   use "folke/todo-comments.nvim"
+  use "xiyaowong/nvim-transparent"
   --dap
   use { "mfussenegger/nvim-dap", version = "0.3.0" }
   use 'leoluz/nvim-dap-go'
