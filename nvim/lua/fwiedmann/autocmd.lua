@@ -8,8 +8,8 @@ api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- lsp-saga
-local sagaGrp = api.nvim_create_augroup("LspSaga", {})
-api.nvim_create_autocmd("CursorHold", {
-  command = "Lspsaga signature_help",
-  group = sagaGrp,
-})
+-- local sagaGrp = api.nvim_create_augroup("LspSaga", {})
+-- api.nvim_create_autocmd("CursorHold", {
+--   command = "Lspsaga signature_help",
+--   group = sagaGrp,
+-- })

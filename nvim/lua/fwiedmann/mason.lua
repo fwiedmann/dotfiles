@@ -10,19 +10,19 @@ end
 
 mason.setup()
 mason_lspconfig.setup(
-{
-  ensure_installed = { "angularls",
-  "sumneko_lua",
-  "cssls",
-  "html",
-  "tsserver",
-  "jsonls",
-  "terraformls",
-  "tflint",
-  "gopls",
-  "jdtls",
-  "yamlls",
-  "kotlin_language_server",
-  "marksman"}
-}
+  {
+    ensure_installed = { "angularls",
+      "sumneko_lua",
+      "cssls",
+      "html",
+      "tsserver",
+      "jsonls",
+      "terraformls",
+      "tflint",
+      "gopls",
+      "jdtls",
+      "yamlls",
+      "kotlin_language_server",
+      "marksman" }
+  }
 )

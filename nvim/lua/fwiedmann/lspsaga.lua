@@ -5,7 +5,3 @@ end
 
 lspsaga.init_lsp_saga({
 })
-
-local keymap = vim.keymap.set
-keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
-keymap("n", "<leader>cr", "<cmd>Lspsaga rename<CR>", { silent = true })
