@@ -17,7 +17,7 @@ vim.opt.splitright = true
 vim.opt.relativenumber = true
 
 vim.opt.spell = true
-vim.opt.spelllang = "en_us"
+vim.opt.spelllang = "en_us,de"
 vim.opt.spellsuggest = "best"
 
 vim.opt.cmdheight = 0
