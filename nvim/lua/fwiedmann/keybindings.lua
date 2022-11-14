@@ -35,6 +35,9 @@ local leader_mappings = {
   -- code
   ["<Leader>cs"] = { ":Lspsaga signature_help<CR>", "Show code signature" },
   ["<Leader>cr"] = { ":Lspsaga rename<CR>", "Rename" },
+  ["<Leader>so"] = { function()
+    vim.opt.spell = not (vim.opt.spell:get())
+  end, "Rename" },
 }
 
 local control_mappings = {

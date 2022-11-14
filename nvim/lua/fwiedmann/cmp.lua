@@ -8,7 +8,9 @@ if not snip_status_ok then
   return
 end
 
+require("luasnip/loaders/from_vscode").load({ paths = { "~/.local/share/nvim/site/pack/packer/start/friendly-snippets" } })
 require("luasnip/loaders/from_vscode").lazy_load()
+
 
 local check_backspace = function()
   local col = vim.fn.col(".") - 1
@@ -97,11 +99,12 @@ cmp.setup({
     format = function(entry, vim_item)
       vim_item.kind = kind_icons[vim_item.kind]
       vim_item.menu = ({
-        nvim_lsp = "",
-        nvim_lua = "",
-        luasnip = "",
-        buffer = "",
-        path = "",
+        nvim_lsp = "lsp",
+        nvim_lua = "nvim_lua",
+        luasnip = "snip",
+        buffer = "buf",
+        path = "path",
+        spell = "spell",
         emoji = "",
       })[entry.source.name]
       return vim_item
@@ -113,6 +116,16 @@ cmp.setup({
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    { name = 'nvim_lsp_signature_help' },
+    {
+      name = 'spell',
+      option = {
+        keep_all_entries = false,
+        enable_in_context = function()
+          return true
+        end,
+      },
+    },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
