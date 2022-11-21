@@ -78,12 +78,19 @@ dap_ui.setup()
 
 vim.keymap.set('n', '<Leader>dt', ":lua require'dapui'.toggle()<cr>", { silent = true })
 
-dap.listeners.after.event_initialized["dapui_config"] = function()
-  dap_ui.open()
-end
-dap.listeners.before.event_terminated["dapui_config"] = function()
-  dap_ui.close()
-end
-dap.listeners.before.event_exited["dapui_config"] = function()
-  dap_ui.close()
-end
+vim.api.nvim_set_hl(0, 'DapBreakpoint', { fg = '#FF3131', ctermbg = 0 })
+vim.api.nvim_set_hl(0, 'DapBg', { bg = '#000000', ctermbg = 0 })
+vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpoint', linehl = 'DapBg' })
+
+vim.api.nvim_set_hl(0, 'DapStopped', { fg = '#0FFF50', ctermbg = 0 })
+vim.fn.sign_define('DapStopped', { text = '', texthl = 'DapStopped', linehl = 'DapBg' })
+
+-- dap.listeners.after.event_initialized["dapui_config"] = function()
+--   dap_ui.open()
+-- end
+-- dap.listeners.before.event_terminated["dapui_config"] = function()
+--   dap_ui.close()
+-- end
+-- dap.listeners.before.event_exited["dapui_config"] = function()
+--   dap_ui.close()
+-- end
