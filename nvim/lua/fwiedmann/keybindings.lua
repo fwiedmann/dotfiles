@@ -13,7 +13,6 @@ local opts = {
   noremap = true, -- use `noremap` when creating keymaps
   nowait = true, -- use `nowait` when creating keymaps
 }
-
 local leader_mappings = {
   name = "Global Leader",
   ["<Leader>w"] = { ":write<cr>", "write buffer" },
@@ -38,6 +37,8 @@ local leader_mappings = {
   ["<Leader>so"] = { function()
     vim.opt.spell = not (vim.opt.spell:get())
   end, "Rename" },
+  -- uuid
+  ["<Leader>gu"] = { ":r !uuidgen|tr \"[A-Z]\" \"[a-z]\"<CR>", "generate uuid" },
 }
 
 local control_mappings = {
