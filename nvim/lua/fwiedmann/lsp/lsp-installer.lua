@@ -21,7 +21,8 @@ local servers = {
   "jdtls",
   "yamlls",
   "kotlin_language_server",
-  "marksman"
+  "marksman",
+  "lemminx"
 }
 
 mason.setup()
