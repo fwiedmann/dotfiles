@@ -84,6 +84,7 @@ return require('packer').startup(function(use)
   use { 'krivahtoo/silicon.nvim', run = './install.sh' }
   use {
     "NTBBloodbath/rest.nvim",
+    commit = "6b5487f68e55bd626f2f2bab6c92e2c19febe814",
     requires = { "nvim-lua/plenary.nvim" }
   }
 

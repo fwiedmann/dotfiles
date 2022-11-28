@@ -30,7 +30,7 @@ local leader_mappings = {
   -- http requst
   ["<Leader>hr"] = { "<Plug>RestNvim", "Run HTTP request at current cursor" },
   ["<Leader>hl"] = { "<Plug>RestNvimLast", "Run last HTTP request" },
-  ["<Leader>hp"] = { "<Plug>RestNvimPreview", "Show curl preview of request" },
+  ["<Leader>hs"] = { "<Plug>RestNvimPreview", "Show curl preview of request" },
   -- code
   ["<Leader>cs"] = { ":Lspsaga signature_help<CR>", "Show code signature" },
   ["<Leader>cr"] = { ":Lspsaga rename<CR>", "Rename" },
