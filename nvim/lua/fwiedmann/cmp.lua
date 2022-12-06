@@ -111,14 +111,15 @@ cmp.setup({
     end,
   },
   sources = {
-    { name = "nvim_lsp" },
-    { name = "nvim_lua" },
-    { name = "luasnip" },
+    { name = "nvim_lsp", priority = 10 },
+    { name = "nvim_lua", priority = 5 },
+    { name = "luasnip", priority = 9 },
     { name = "buffer" },
-    { name = "path" },
+    { name = "path", priority = 8 },
     { name = 'nvim_lsp_signature_help' },
     {
       name = 'spell',
+      priority = 7,
       option = {
         keep_all_entries = false,
         enable_in_context = function()

@@ -22,7 +22,7 @@ local servers = {
   "yamlls",
   "kotlin_language_server",
   "marksman",
-  "lemminx"
+  -- "lemminx"
 }
 
 mason.setup()
