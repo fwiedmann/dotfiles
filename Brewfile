@@ -14,6 +14,7 @@ brew "telnet"
 brew "quarkus"
 brew "google-java-format"
 brew "bensadeh/circumflex/circumflex"
+brew "flameshot"
 
 cask "brave-browser"
 cask "firefox"
