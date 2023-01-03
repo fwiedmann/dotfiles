@@ -102,4 +102,6 @@ return require('packer').startup(function(use)
   }
   use 'David-Kunz/jester'
   use "fwiedmann/nx-dap.nvim"
+
+  use 'ChristianChiarulli/nvim-ts-rainbow'
 end)
