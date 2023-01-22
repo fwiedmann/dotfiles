@@ -9,6 +9,8 @@ if not status_cmp_ok then
   return
 end
 capabilities.textDocument.completion.completionItem.snippetSupport = false
+capabilities.textDocument.willSave = true
+capabilities.textDocument.willSaveWaitUntil = true
 capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
 local status, jdtls = pcall(require, "jdtls")
@@ -119,6 +121,21 @@ local config = {
   -- for a list of options
   settings = {
     java = {
+      saveActions = {
+        organizeImports = true
+      },
+      cleanup = {
+        actionsOnSave = {
+          "qualifyMembers",
+          "addOverride",
+          "qualifyStaticMembers",
+          "stringConcatToTextBlock",
+          "invertEquals",
+          "addFinalModifier",
+          "lambdaExpression",
+          "addDeprecated",
+        }
+      },
       -- jdt = {
       --   ls = {
       --     vmargs = "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m"
