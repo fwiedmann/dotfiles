@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
   use 'f-person/git-blame.nvim'
   use 'tpope/vim-fugitive'
 
-  use 'kyazdani42/nvim-tree.lua'
+  use { 'nvim-tree/nvim-tree.lua', commit = 'bbb6d4891009de7dab05ad8fc2d39f272d7a751c' }
 
   use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-treesitter/nvim-treesitter-context'
@@ -41,9 +41,9 @@ return require('packer').startup(function(use)
   use { 'L3MON4D3/LuaSnip', requires = "kyazdani42/nvim-web-devicons" }
 
   -- code completion & autocpmpletion
-  use { "hrsh7th/nvim-cmp", commit = "2427d06b6508489547cd30b6e86b1c75df363411" } -- The completion plugin
-  use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions
-  use { "hrsh7th/cmp-path", commit = "447c87cdd6e6d6a1d2488b1d43108bfa217f56e1" } -- path completions
+  use { "hrsh7th/nvim-cmp", commit = "2427d06b6508489547cd30b6e86b1c75df363411" }         -- The completion plugin
+  use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" }       -- buffer completions
+  use { "hrsh7th/cmp-path", commit = "447c87cdd6e6d6a1d2488b1d43108bfa217f56e1" }         -- path completions
   use { "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" } -- snippet completions
   use { "hrsh7th/cmp-nvim-lsp-signature-help" }
   use 'rafamadriz/friendly-snippets'
