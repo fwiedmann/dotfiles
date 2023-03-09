@@ -1,4 +1,5 @@
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 
 brew "k9s"
 brew "jq"
@@ -11,10 +12,11 @@ brew "node"
 brew "neovim"
 brew "stern"
 brew "telnet"
-brew "quarkus"
 brew "google-java-format"
 brew "bensadeh/circumflex/circumflex"
 brew "flameshot"
+brew "ripgrep"
+brew "quarkusio/tap/quarkus"
 
 cask "brave-browser"
 cask "firefox"

@@ -10,7 +10,7 @@ end
 
 local servers = {
   "angularls",
-  "sumneko_lua",
+  "lua_ls",
   "cssls",
   "html",
   "tsserver",

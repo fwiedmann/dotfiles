@@ -51,9 +51,9 @@ return require('packer').startup(function(use)
   use { "hrsh7th/cmp-nvim-lsp", commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8" }
   use { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }
 
-  use { "neovim/nvim-lspconfig", commit = "e5ba5d2b96843903108b00f07fea782268cdd6af" } -- enable LSP
+  use { "neovim/nvim-lspconfig", commit = "f3e6c034d103e3476821af596a67df71d76f85a9" } -- enable LSP
   -- use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
-  use { "williamboman/mason.nvim", commit = '45606b0e9b01a1565bfc8b57a52ec04f58f5f295' }
+  use { "williamboman/mason.nvim", commit = 'a8cef27f071fe34696a9c8fa55829900e2291e86' }
 
   use { "williamboman/mason-lspconfig.nvim" }
 
