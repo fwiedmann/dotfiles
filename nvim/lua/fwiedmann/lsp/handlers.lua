@@ -14,15 +14,15 @@ end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true
-M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
+M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 
 M.setup = function()
   local signs = {
 
     { name = "DiagnosticSignError", text = "" },
-    { name = "DiagnosticSignWarn", text = "" },
-    { name = "DiagnosticSignHint", text = "" },
-    { name = "DiagnosticSignInfo", text = "" },
+    { name = "DiagnosticSignWarn",  text = "" },
+    { name = "DiagnosticSignHint",  text = "" },
+    { name = "DiagnosticSignInfo",  text = "" },
   }
 
   for _, sign in ipairs(signs) do
@@ -32,7 +32,7 @@ M.setup = function()
   local config = {
     virtual_text = false, -- disable virtual text
     signs = {
-      active = signs, -- show signs
+      active = signs,     -- show signs
     },
     update_in_insert = true,
     underline = true,
@@ -79,7 +79,6 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-
   if client.name == "tsserver" then
     client.server_capabilities.document_formatting = false
   end

@@ -11,7 +11,7 @@ end
 capabilities.textDocument.completion.completionItem.snippetSupport = false
 capabilities.textDocument.willSave = true
 capabilities.textDocument.willSaveWaitUntil = true
-capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 local status, jdtls = pcall(require, "jdtls")
 if not status then
@@ -106,15 +106,12 @@ local config = {
     "-data",
     workspace_dir,
   },
-
   on_attach = require("fwiedmann.lsp.handlers").on_attach,
   capabilities = capabilities,
-
   -- 💀
   -- This is the default if not provided, you can remove it. Or adjust as needed.
   -- One dedicated LSP server & client will be started per unique root_dir
   root_dir = root_dir,
-
   -- Here you can configure eclipse.jdt.ls specific settings
   -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
   -- or https://github.com/redhat-developer/vscode-java#supported-vs-code-settings
@@ -198,11 +195,9 @@ local config = {
       useBlocks = true,
     },
   },
-
   flags = {
     allow_incremental_sync = true,
   },
-
   -- Language server `initializationOptions`
   -- You need to extend the `bundles` with paths to jar files
   -- if you want to use additional eclipse.jdt.ls plugins.
@@ -234,18 +229,18 @@ if not status_ok then
 end
 
 local opts = {
-  mode = "n", -- NORMAL mode
+  mode = "n",     -- NORMAL mode
   prefix = "",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
+  buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true,  -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
-  nowait = true, -- use `nowait` when creating keymaps
+  nowait = true,  -- use `nowait` when creating keymaps
 }
 
 local mappings = {
   name = "Java",
-  ["<Leader>tn"] = { ":lua require'jdtls'.test_nearest_method()<CR>", "Run nearest method" },
-  ["<Leader>tc"] = { ":lua require'jdtls'.test_class()<CR>", "Run test class" }
+      ["<Leader>tn"] = { ":lua require'jdtls'.test_nearest_method()<CR>", "Run nearest method" },
+      ["<Leader>tc"] = { ":lua require'jdtls'.test_class()<CR>", "Run test class" }
 }
 
 which_key.register(mappings, opts)
