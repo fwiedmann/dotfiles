@@ -1,5 +1,7 @@
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "blendle/blendle"
+
 
 brew "k9s"
 brew "jq"
@@ -17,6 +19,7 @@ brew "bensadeh/circumflex/circumflex"
 brew "flameshot"
 brew "ripgrep"
 brew "quarkusio/tap/quarkus"
+brew "kns"
 
 cask "brave-browser"
 cask "firefox"
