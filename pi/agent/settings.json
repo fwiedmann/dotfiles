@@ -1,0 +1,15 @@
+{
+  "lastChangelogVersion": "0.84.4",
+  "theme": "dracula-light/dracula",
+  "packages": [
+    "npm:pi-cursor-sdk",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-zentui",
+    "npm:pi-terminal-notifier"
+  ],
+  "showHardwareCursor": true,
+  "terminal": {
+    "showImages": false
+  },
+  "tuiMode": "fullscreen"
+}

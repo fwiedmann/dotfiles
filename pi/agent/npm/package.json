@@ -1,0 +1,10 @@
+{
+  "name": "pi-extensions",
+  "private": true,
+  "dependencies": {
+    "@juicesharp/rpiv-ask-user-question": "^2.8.0",
+    "pi-cursor-sdk": "^0.3.6",
+    "pi-terminal-notifier": "^1.0.1",
+    "pi-zentui": "^0.21.0"
+  }
+}

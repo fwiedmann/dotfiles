@@ -7,13 +7,18 @@
 - [eslint_d](https://github.com/mantoni/eslint_d.js/)
 - [revive](https://revive.run/)
 
-## Terminal Emulator
+## Terminal emulator
 
-- [kitty](https://sw.kovidgoyal.net/kitty/)
+- [Ghostty](https://ghostty.org/) with the Alucard theme in `ghostty/themes/Alucard`
 - [oh-my-ZSH](https://ohmyz.sh/)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
-- [dracula theme](https://draculatheme.com/)
 - [JetBrainsMono Nerd Font Mono Regular](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
+
+## pi agent
+
+Tracked under `pi/agent/`: settings, themes, zentui, skills, and `npm/package.json`.
+`backup.sh` copies from `~/.pi/agent`. `bootstrap.sh` copies back.
+Sessions, `auth.json`, and `npm/node_modules` stay local.
 
 ## Disable LS Formatters
 
@@ -67,8 +72,10 @@ Also use [google-java-format](https://github.com/google/google-java-format) for 
 
 ## Brew
 
-Install required software with the brew package manager + the [bundle](https://github.com/homebrew/homebrew-bundle) extension:
+Install from the Brewfile:
 
-```Bash
+```bash
 brew bundle
 ```
+
+`backup.sh` does not regenerate the Brewfile. Edit it when you add or drop packages.
