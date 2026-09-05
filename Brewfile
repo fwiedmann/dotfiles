@@ -23,6 +23,8 @@ brew "trivy"
 brew "uv"
 brew "virtualenv"
 brew "watch"
+brew "tree-sitter-cli"
+brew "ripgrep"
 
 # Casks
 cask "eurkey"
