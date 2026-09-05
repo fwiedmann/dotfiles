@@ -1,12 +1,13 @@
 # Neovim configuration
 
-Small Neovim 0.12 configuration built around native APIs and nine plugins.
+Small Neovim 0.12 configuration built around native APIs and twelve plugins.
 
 ## Requirements
 
 - Neovim 0.12.5
 - Git and ripgrep
 - `tree-sitter-cli` 0.26.1 or newer
+- `lazygit`, for the LazyGit integration
 - A Nerd Font selected in the terminal, for file icons
 - Java, Go, and Node.js for the configured language servers
 
@@ -18,10 +19,10 @@ and Lua language servers.
 - `init.lua`: load order
 - `lua/config/options.lua`: editor defaults
 - `lua/config/packages.lua`: native `vim.pack` plugin list
-- `lua/config/theme.lua`: Dracula theme
+- `lua/config/theme.lua`: Dracula/Alucard colorscheme with auto light/dark switching
 - `lua/config/keymaps.lua`: general keymaps
 - `lua/config/autocmds.lua`: built-in editor automation
-- `lua/config/navigation.lua`: nvim-tree, Telescope, and file icons
+- `lua/config/navigation.lua`: nvim-tree, Telescope, LazyGit, and file icons
 - `lua/config/treesitter.lua`: parser list and highlighting
 - `lua/config/lsp.lua`: Mason, LSP, completion, and formatting
 
@@ -29,13 +30,17 @@ and Lua language servers.
 
 | Key | Action |
 | --- | --- |
+| `<leader>w` | Write buffer |
+| `<leader>q` | Close buffer |
 | `<leader>n` | Toggle file tree |
 | `<leader>ff` | Find files |
 | `<leader>fg` | Search text |
 | `<leader>fb` | Find buffers |
+| `<leader>lg` | Open LazyGit |
 | `<S-h>` / `<S-l>` | Previous / next buffer |
 | `<leader>bp` | Pick a buffer from the buffer line |
 | `<leader>bc` | Close the current buffer |
+| `<C-h/j/k/l>` | Focus left/lower/upper/right window |
 | `gd` | Go to definition |
 | `gr` | Find references |
 | `K` | Show hover information |
