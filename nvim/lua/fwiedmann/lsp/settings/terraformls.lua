@@ -1,5 +1,0 @@
-return {
-  filetypes = {
-    "terraform", "hcl"
-  }
-}

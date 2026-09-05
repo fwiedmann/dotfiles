@@ -1,0 +1,12 @@
+# Format - HTML
+- What: A single HTML file that can be easily shared with other people
+- Filename pattern: 'review-walkthrough-<short name that represents the change>-<creation-date>'
+- Style:
+    - Use a linear, minimalistic design with dark and light themes. Respect the system preference by default
+    - Code snippets should have a theme applied for better reading
+- Diagrams: Use svg to draw the diagrams
+- Quiz:
+    - Should be at the end
+    - The user should be able to check and answer
+    - At the end of the quiz there is a validation button; when clicked it validates the answers
+    - The questions will be marked green for correct and red for invalid

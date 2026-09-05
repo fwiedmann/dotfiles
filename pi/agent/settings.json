@@ -1,15 +1,21 @@
 {
-  "lastChangelogVersion": "0.84.4",
+  "lastChangelogVersion": "0.85.0",
   "theme": "dracula-light/dracula",
   "packages": [
-    "npm:pi-cursor-sdk",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-zentui",
-    "npm:pi-terminal-notifier"
+    "npm:pi-terminal-notifier",
+    "npm:pi-lens",
+    "npm:pi-subagents"
   ],
   "showHardwareCursor": true,
   "terminal": {
     "showImages": false
   },
-  "tuiMode": "fullscreen"
+  "tuiMode": "fullscreen",
+  "hideThinkingBlock": false,
+  "enabledModels": [
+    "azure-openai-responses/gpt-5.6-luna",
+    "azure-openai-responses/gpt-5.6-sol"
+  ]
 }

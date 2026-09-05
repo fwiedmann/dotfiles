@@ -5,6 +5,10 @@ cp ~/.zshrc .
 cp ~/.p10k.zsh .
 cp ~/.env .
 
+rm -rf nvim
+mkdir -p nvim
+rsync -a --exclude '.cursor' --exclude '.DS_Store' "$HOME/.config/nvim/" nvim/
+
 mkdir -p ghostty/themes
 if [ -f "$HOME/.config/ghostty/config" ]; then
   cp "$HOME/.config/ghostty/config" ghostty/config
