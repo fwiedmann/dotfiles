@@ -1,1 +1,2 @@
 theme = light:Alucard,dark:Dracula
+confirm-close-surface = false
