@@ -6,7 +6,7 @@
     "npm:pi-zentui",
     "npm:pi-terminal-notifier",
     "npm:pi-lens",
-    "npm:pi-subagents"
+    "npm:@tintinweb/pi-subagents"
   ],
   "showHardwareCursor": true,
   "terminal": {
