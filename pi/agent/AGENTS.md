@@ -3,6 +3,10 @@
 ## General
 
 - Use the 'ask_user_question' tool whenever you ask the user anything
+- For changes in a Git repository, work in a Git worktree based on `origin/main` unless
+the user specifies another ref. Make changes on a dedicated branch. When complete, commit
+them and report the branch name and commit for the user to merge. Do not modify the
+original checkout. 
 
 ## Approval required
 
