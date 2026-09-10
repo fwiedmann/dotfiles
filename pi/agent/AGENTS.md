@@ -3,10 +3,12 @@
 ## General
 
 - Use the 'ask_user_question' tool whenever you ask the user anything
-- For changes in a Git repository, work in a Git worktree based on `origin/main` unless
-the user specifies another ref. Make changes on a dedicated branch. When complete, commit
-them and report the branch name and commit for the user to merge. Do not modify the
-original checkout. 
+- For changes in a Git repository, work in a Git worktree based on the original checkout's
+current branch unless the user specifies another ref. Create the worktree under the OS temp
+directory (`$TMPDIR` when set, otherwise `/tmp`), inside a `pi-agent-worktrees/`
+subdirectory. Make changes on a dedicated branch. When complete, commit them locally, do
+not push, and report the branch name and commit for the user to merge. Do not modify the
+original checkout.
 
 ## Approval required
 
