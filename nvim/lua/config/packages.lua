@@ -15,6 +15,10 @@ vim.pack.add({
   github("mason-org/mason-lspconfig.nvim"),
   github("neovim/nvim-lspconfig"),
   github("nvim-treesitter/nvim-treesitter"),
+  github("iamcco/markdown-preview.nvim"),
 }, { confirm = false })
+
+vim.g.mkdp_filetypes = { "markdown" }
+vim.cmd.packadd("markdown-preview.nvim")
 
 require("bufferline").setup({})

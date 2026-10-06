@@ -1,6 +1,6 @@
 # Neovim configuration
 
-Small Neovim 0.12 configuration built around native APIs and nine plugins.
+Small Neovim 0.12 configuration built around native APIs and ten plugins.
 
 ## Requirements
 
@@ -24,6 +24,7 @@ and Lua language servers.
 - `lua/config/navigation.lua`: nvim-tree, Telescope, and file icons
 - `lua/config/treesitter.lua`: parser list and highlighting
 - `lua/config/lsp.lua`: Mason, LSP, completion, and formatting
+- `markdown-preview.nvim`: Markdown preview in a browser
 
 ## Keymaps
 

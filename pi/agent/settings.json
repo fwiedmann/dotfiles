@@ -1,12 +1,13 @@
 {
-  "lastChangelogVersion": "0.85.1",
+  "lastChangelogVersion": "1.0.3",
   "theme": "dracula-light/dracula",
   "packages": [
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-zentui",
     "npm:pi-terminal-notifier",
     "npm:pi-lens",
-    "npm:@tintinweb/pi-subagents"
+    "npm:@tintinweb/pi-subagents",
+    "../../../../opt/homebrew/lib/node_modules/confluence-cli"
   ],
   "showHardwareCursor": true,
   "terminal": {
@@ -15,7 +16,7 @@
   "tuiMode": "fullscreen",
   "hideThinkingBlock": false,
   "enabledModels": [
-    "azure-openai-responses/gpt-5.6-luna",
-    "azure-openai-responses/gpt-5.6-sol"
+    "azure/gpt-6-sol",
+    "azure/gpt-6-luna"
   ]
 }
