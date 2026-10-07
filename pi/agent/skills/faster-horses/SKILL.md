@@ -15,7 +15,9 @@ Use the full discovery process when an uncertainty could materially change the s
 
 ## Discover together
 
-Ask one or two focused questions per round using `ask_user_question`. Follow its required option format, with meaningful choices based on known context and room for the user's custom answer. For open-ended discovery with little context, offer ways to supply evidence rather than guessed answers. For example, ask "Which starting point can you describe?" with "Recent incident" to explain a specific occurrence and "Current workflow" to explain the usual steps and where they fail. The tool's custom-answer field remains available for details or a different starting point. Keep inferred needs provisional until the user confirms them. Avoid inventing preferences or steering answers toward your preferred solution.
+Ask one or two focused questions per round, then wait for the user's response. Use ordinary conversation or the host's question interface, following its interaction rules. No specific tool is required.
+
+Prefer open-ended questions when discovering the situation or problem. Offer choices only when they help the user compare known possibilities, and leave room for an answer outside those choices. Keep inferred needs provisional until the user confirms them. Avoid inventing preferences or steering answers toward your preferred solution.
 
 Choose the next question by which uncertainty is most likely to change what gets built. Use the stages below as a guide, not a fixed questionnaire. Skip answered questions and return to earlier stages when new information changes the picture.
 
