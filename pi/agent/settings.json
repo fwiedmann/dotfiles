@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.0.3",
+  "lastChangelogVersion": "1.0.4",
   "theme": "dracula-light/dracula",
   "packages": [
     "npm:@juicesharp/rpiv-ask-user-question",
@@ -16,7 +16,7 @@
   "tuiMode": "fullscreen",
   "hideThinkingBlock": false,
   "enabledModels": [
-    "azure/gpt-6-sol",
-    "azure/gpt-6-luna"
+    "azure/gpt-6-luna",
+    "azure/gpt-6.1-sol"
   ]
 }
