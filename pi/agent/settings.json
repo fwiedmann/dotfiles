@@ -1,5 +1,6 @@
 {
   "lastChangelogVersion": "1.0.4",
+  "defaultTools": ["+codemode"],
   "theme": "dracula-light/dracula",
   "packages": [
     "npm:@juicesharp/rpiv-ask-user-question",
