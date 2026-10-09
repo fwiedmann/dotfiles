@@ -19,9 +19,9 @@ fi
 
 mkdir -p pi/agent/themes pi/agent/skills pi/agent/npm
 cp "$HOME/.pi/agent/settings.json" pi/agent/settings.json
-cp -r "$HOME/.pi/agent/agents" pi/agent/agents
 cp "$HOME/.pi/agent/AGENTS.md" pi/agent/AGENTS.md
 cp "$HOME/.pi/agent/zentui.json" pi/agent/zentui.json
 cp "$HOME/.pi/agent/npm/package.json" pi/agent/npm/package.json
 cp -R "$HOME/.pi/agent/themes/." pi/agent/themes/
 cp -R "$HOME/.pi/agent/skills/." pi/agent/skills/
+cp -R "$HOME/.pi/agent/agents/" pi/agent/agents/
