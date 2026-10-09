@@ -17,7 +17,7 @@
 ## pi agent
 
 Tracked under `pi/agent/`: settings, themes, zentui, skills, extensions, and `npm/package.json`.
-`backup.sh` copies from `~/.pi/agent`. `bootstrap.sh` copies back.
+`backup.sh` copies from `~/.pi/agent`. `bootstrap.sh` copies tracked files back, overwriting matching files but leaving untracked local files in place.
 Sessions, `auth.json`, and `npm/node_modules` remain under `~/.pi/agent` and are not copied into the repository.
 
 ## Neovim
