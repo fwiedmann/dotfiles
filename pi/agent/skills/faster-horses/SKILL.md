@@ -71,7 +71,7 @@ If no useful alternative emerges, say so and proceed with the original proposal 
 
 Finish discovery when the user confirms the situation, problem, and desired outcome, and either chooses a solution or accepts a validation step. Remaining assumptions must be explicitly accepted or assigned a way to check them. If the user asks to proceed sooner, summarize the outstanding assumptions and honor that direction within applicable safety constraints.
 
-Produce a compact handoff in the conversation:
+After the persistence step below is complete or skipped, produce one final compact handoff in the conversation:
 
 - **Situation:** Who is affected and what they are trying to do.
 - **Problem:** What prevents progress and why it matters.
@@ -79,4 +79,16 @@ Produce a compact handoff in the conversation:
 - **Solution:** The chosen approach, or the experiment needed before choosing, and why it fits.
 - **Open assumptions:** What remains uncertain and how to check it, or none.
 
-Keep solution selection provisional when evidence is weak. A small experiment can be the right result instead of a feature plan. This skill ends at discovery and handoff; implementation follows the user's request and the normal planning process.
+Keep solution selection provisional when evidence is weak. A small experiment can be the right result instead of a feature plan.
+
+## Persist durable learning
+
+Before delivering that final handoff, decide whether the discussion established a confirmed, reusable insight that should shape future work. Save durable learning, not a transcript. If nothing reusable was settled, say no record is warranted and finish without creating a file. Keep unresolved ideas marked as provisional rather than recording them as facts.
+
+Inspect the project's existing documentation and conventions, then choose the closest source of truth. Prefer updating an existing artifact over creating a parallel one. Use `CONTEXT.md` for settled domain language, an ADR for a significant design trade-off, or the project's established decision or learning notes for other discoveries. Avoid storing project-specific knowledge in global agent configuration.
+
+If the user has not already specified the destination, propose the best-fit path and briefly explain why, then ask for confirmation through the host's question interface before writing. Wait for the answer. If the user specified a destination, use it without asking again. If the user declines the proposed location, do not write the record.
+
+Keep the record concise. Include the need or outcome, the decision and whether it is confirmed, the rationale and evidence, alternatives set aside, a concrete future cue for when the learning applies, remaining assumptions or questions, and relevant source paths or links. After writing, include the file path and the key takeaway in the handoff.
+
+The skill ends after the handoff and this persistence step. Implementation follows the user's request and the normal planning process.
