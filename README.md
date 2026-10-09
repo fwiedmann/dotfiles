@@ -16,7 +16,7 @@
 
 ## pi agent
 
-Tracked under `pi/agent/`: settings, themes, zentui, skills, and `npm/package.json`.
+Tracked under `pi/agent/`: settings, themes, zentui, skills, extensions, and `npm/package.json`.
 `backup.sh` copies from `~/.pi/agent`. `bootstrap.sh` copies back.
 Sessions, `auth.json`, and `npm/node_modules` stay local.
 
