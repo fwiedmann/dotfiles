@@ -18,7 +18,7 @@
 
 Tracked under `pi/agent/`: settings, themes, zentui, skills, extensions, and `npm/package.json`.
 `backup.sh` copies from `~/.pi/agent`. `bootstrap.sh` copies back.
-Sessions, `auth.json`, and `npm/node_modules` stay local.
+Sessions, `auth.json`, and `npm/node_modules` remain under `~/.pi/agent` and are not copied into the repository.
 
 ## Neovim
 
