@@ -10,7 +10,8 @@
     "npm:pi-terminal-notifier",
     "npm:pi-lens",
     "npm:@tintinweb/pi-subagents",
-    "../../../../opt/homebrew/lib/node_modules/confluence-cli"
+    "../../../../opt/homebrew/lib/node_modules/confluence-cli",
+    "../../git/github.com/fwiedmann/skill-doc-workflow"
   ],
   "showHardwareCursor": true,
   "terminal": {
