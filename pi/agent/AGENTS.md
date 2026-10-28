@@ -15,12 +15,10 @@ merge that branch into the branch checked out in the original checkout, then rem
 dedicated worktree. Do not push. If the merge cannot complete safely, leave the worktree
 intact and ask the user how to proceed.
 
-## Approval required
+## Write permission and approval
 
-The following actions ALWAYS require user approval.
-ALWAYS explain in a short sentence why this is needed and what the action does.
+Ordinary local writes needed for the user's task are permitted without a separate approval. Preserve unrelated user changes and follow the Git workflow above.
 
-- Running administrative commands locally (e.g. sudo, rm -rf) always require approval from the user
-- Installing/Uninstalling new applications (like via brew or npm)
-- Deleting system files (outside a git repo, files that are not tracked)
-- git force pushes (explain why it is needed)
+During planning, if the task may require a remote write, administrative command (e.g. sudo or rm -rf), application installation or uninstallation (e.g. via brew or npm), deletion of untracked files outside a Git repo, or Git force push, load and follow the `permission-review` skill before executing the plan. If the need emerges later, review it before taking the action. These actions always require user approval. Explain what each action does and why it is needed.
+
+A task's approval covers only the actions and targets the user explicitly approves. Follow any additional tool-level or higher-priority approval requirements.
